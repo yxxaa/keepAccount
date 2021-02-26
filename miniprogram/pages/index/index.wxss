@@ -1,0 +1,55 @@
+/* pages/index/index.wxss */
+/* .login_button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
+.userHead {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgb(153, 232, 225);
+    margin: 4px 0 0 4px;
+}
+
+.outside {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgb(153, 232, 225);
+    margin-right: 10px;
+}
+
+.topBox {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(246, 246, 246)
+}
+
+.page-section-spacing {
+    margin-top: 60rpx;
+}
+
+.scroll-view-item {
+    display: flex;
+    height: 200rpx;
+}
+
+.scroll-view-item view {
+    padding: 0 10px 0 10px;
+    width: 50%;
+}
