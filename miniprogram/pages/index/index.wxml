@@ -1,37 +1,95 @@
 <!--pages/index/index.wxml-->
-<!-- <view class="safe main">
-    <view class="title">
-        <text>非法同居公账计算</text>
-    </view>
-    <view class="login_button">
-        <van-button type="primary" bind:click="onGetOpenid">微信账号一键登录</van-button>
-    </view>
-</view> -->
-<view>
+<view class="main">
     <view class="topBox">
         <view class="outside">
-            <image class="userHead" src='{{avatarUrl}}'></image>
+            <view class="userHead">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <!-- <image class="userHead" bindtap="getBasic" src='{{avatarUrl}}'></image> -->
         </view>
-        <text>{{nickName}}</text>
+        <!-- <text>{{nickName}}</text> -->
+        <open-data type="userNickName"></open-data>
     </view>
-    <van-tabs active="{{ active }}" color="#99ccff">
-        <van-tab title="我的支出">
-            <view class="page-section-spacing">
-                <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower"
-                    bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-                    <view id="demo1" class="scroll-view-item">
-                        <view>
-                            <text>支出金额：\n99.00元</text>
+    <view class="" style="flex-grow: 1">
+        <van-tabs class="mianInfo" active="{{ active }}" color="#99ccff">
+            <van-tab title="我的支出">
+                <scroll-view class="page-section-spacing" scroll-y="true" bindscrolltolower="lower"
+                    scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                    <!-- <view wx:for="{{myPay}}" wx:key="id">
+                        <view class="scroll-view-item">
+                            <view>
+                                <text>支出金额：\n{{item.expenditure}}元</text>
+                            </view>
+                            <view>
+                                <text>商品：\n{{item.goods}}</text>
+                            </view>
                         </view>
-                        <view>
-                            <text>商品：\n刀具</text>
+                    </view> -->
+                    <view wx:for="{{myPaylist}}" wx:key="id">
+                        <view class="scroll-view-item">
+                            <view class="scroll-view-item-head">
+                                <view>{{item.datatime}}</view>
+                                <view>支出:{{item.total}}</view>
+                            </view>
+                            <view wx:for="{{item.list}}" wx:for-item="detail" class="scroll-view-item-body">
+
+                                    <view class="scroll-view-item-body-left">
+                                        <view class="scroll-view-item-body-left-imgbox">
+                                            <image src="{{detail.avatarUrl}}"></image>
+                                            <!-- <open-data type="userAvatarUrl"></open-data> -->
+                                        </view>
+                                        <view>{{detail.content}}</view>
+                                    </view>
+                                    <view>{{detail.money}}</view>
+
+                            </view>
+
+
                         </view>
                     </view>
-                    <view id="demo2" class="scroll-view-item">2</view>
-                    <view id="demo3" class="scroll-view-item">3</view>
                 </scroll-view>
-            </view>
-        </van-tab>
-        <van-tab title="公账合计">公账合计</van-tab>
-    </van-tabs>
+            </van-tab>
+            <van-tab title="公账合计">
+                <ul style="float:left">
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                    <li>11</li>
+                </ul>
+                <navigator style="width:20rpx" url="../keepAccount/keepAccount" redirect>排行榜</navigator>
+            </van-tab>
+        </van-tabs>
+        <!-- <view>
+            <van-button bindtap="showFrom" type="info">添加支出</van-button>
+            <van-dialog use-slot title="新建支出" show="{{ show }}" show-cancel-button
+                confirm-button-open-type="getUserInfo" bind:close="onClose" bind:getuserinfo="getUserInfo">
+                <van-cell-group>
+                    <van-field model:value="{{ value }}" placeholder="请输入支出金额" border="{{ false }}" />
+                    <van-field model:value="{{ tradeName }}" placeholder="请输入商品名称" border="{{ false }}" />
+                </van-cell-group>
+            </van-dialog>
+        </view> -->
+
+
+
+
+        <!-- <view>
+            <input model:value="{{ test }}" class="weui-input" maxlength="10" placeholder="最大输入长度为10" />
+            <van-field model:value="{{ test2 }}" placeholder="请输入商品名称" />
+        </view> -->
+
+    </view>
+    <!-- <view class="" style="height:50px"><tableBar></tableBar></view> -->
 </view>

@@ -1,1 +1,27 @@
 /* pages/home/home.wxss */
+page {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.userHead {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 4rpx solid #fff;
+  box-shadow: 6rpx 6rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.topBox {
+  display: flex;
+  align-items: center;
+  background-color: rgb(246, 246, 246)
+}

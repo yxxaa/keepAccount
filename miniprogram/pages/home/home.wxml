@@ -1,2 +1,24 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="main">
+  <view class="topBox">
+    <view class="outside">
+      <view class="userHead">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view class="flex-grow1">
+    <scroll-view scroll-y="true">
+      
+      <van-cell title="新建组" is-link />
+      <van-cell title="单元格" is-link value="内容" />
+      <van-cell title="单元格" is-link value="内容" />
+      <van-cell title="单元格" is-link value="内容" />
+      <van-cell title="单元格" is-link value="内容" />
+      
+    </scroll-view>
+  </view>
+
+
+</view>

@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/keepAccount/keepAccount",
+    "pages/group/group"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -14,6 +16,42 @@
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
     "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/console-entrance.png",
+        "iconPath": "images/console-entrance.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/console-entrance.png",
+        "iconPath": "images/console-entrance.png",
+        "pagePath": "pages/keepAccount/keepAccount",
+        "text": "记账"
+      },
+      {
+        "selectedIconPath": "images/console-entrance.png",
+        "iconPath": "images/console-entrance.png",
+        "pagePath": "pages/group/group",
+        "text": "组"
+      },
+      {
+        "selectedIconPath": "images/console-entrance.png",
+        "iconPath": "images/console-entrance.png",
+        "pagePath": "pages/home/home",
+        "text": "我的"
+      }
+    ]
   }
 }

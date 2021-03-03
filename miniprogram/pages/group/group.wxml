@@ -1,0 +1,14 @@
+<!--miniprogram/pages/group/group.wxml-->
+<view class="main">
+  <view>
+    <van-button bindtap="showFrom" type="info">添加支出</van-button>
+    <van-dialog use-slot title="新建支出" show="{{ show }}" show-cancel-button
+      bind:close="onClose" bind:confirm="getUserInfo">
+      <van-cell-group>
+        <van-field model:value="{{ value }}" placeholder="请输入支出金额" border="{{ false }}" />
+        <van-field model:value="{{ tradeName }}" placeholder="请输入商品名称" border="{{ false }}" />
+      </van-cell-group>
+    </van-dialog>
+  </view>
+  <view></view>
+</view>
